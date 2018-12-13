@@ -1,0 +1,3 @@
+[
+	{ "keys": ["Ctrl+M"], "command": "send_to_foobar2000" }
+]

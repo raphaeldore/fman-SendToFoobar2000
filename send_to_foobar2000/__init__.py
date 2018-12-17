@@ -24,7 +24,7 @@ class SendToFoobar2000(DirectoryPaneCommand):
                 show_status_message("Executed command: {}".format(" ".join(args)), timeout_secs=30) 
                 subprocess.call(args)
             else:
-                show_alert("There seems to be an issue.")
+                show_alert("SendToFoobar2000: No foobar2000 executable configured. Unable to continue.")
     
     def _get_foobar2000_exe_path(self):
         config = load_json(CONFIG_FILE_NAME, default={})

@@ -18,7 +18,7 @@ class SendToFoobar2000(DirectoryPaneCommand):
             foobar2000_exe = self._get_foobar2000_exe_path()
 
             if foobar2000_exe:
-                args = [foobar2000_exe, '/add']
+                args = [foobar2000_exe, '/immediate', '/add'] # add '/show' to bring foobar2000 to front
                 args.extend(chosen_files_human_readable)
 
                 show_status_message("Executed command: {}".format(" ".join(args)), timeout_secs=30) 
